@@ -59,6 +59,7 @@ A **CRUD** application is a type of software application that creates, reads, up
 
 > 6. Create JavaScript files that will make AJAX requests to the routes created in step 5 and update the UI accordingly based on responses received from server-side code.
 <br>
+
 ## Instructions
 
 1. Open the terminal and run "npm install -y"
