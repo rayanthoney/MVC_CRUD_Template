@@ -44,9 +44,17 @@ The MVC archetecture includes the following components:
 <br>
 
 A **CRUD** application is a type of software application that creates, reads, updates, and deletes data from a database. It stands for **Create**, **Read**, **Update**, and **Delete**. CRUD applications are used to manage data in databases such as MySQL or MongoDB. They are used to create, read, update and delete records in the database. Examples of CRUD applications include content management systems (CMS), customer relationship management (CRM) systems, and online shopping carts.
-## How It's Made:
 
+## How It's Made:
 **Technologies used:** HTML, CSS, JavaScript, NodeJS, MongoDB, and Express.
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,mongodb,express" />
+  </a>
+</p>
+<br>
+
 > 1. Create the HTML and CSS files for the application. This will include the HTML structure and styling for the application.
 
 > 2. Create a NodeJS server using Express to handle requests from the client side.
@@ -72,12 +80,7 @@ A **CRUD** application is a type of software application that creates, reads, up
 5. In the terminal, type "npm start"
 6. Open the browser to http://localhost:8500/ and you should see the homepage!
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,mongodb,express" />
-  </a>
-</p>
-<br>
+
 
 <!-- <p align="center">
   <a href="https://skillicons.dev">
