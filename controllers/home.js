@@ -12,8 +12,8 @@ module.exports = {
     createItem: async (req,res) => {
         const newItem = new ItemList(
             {
-                textinput: req.body.textinput,
-                numinput: req.body.numinput
+                textInput: req.body.textinput,
+                numInput: req.body.numinput
             }
         )
         try {
