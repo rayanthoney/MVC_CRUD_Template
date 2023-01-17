@@ -4,6 +4,9 @@ const app = express()
 const PORT = 8000
 const mongoose = require("mongoose")
 
+// Use `mongoose.set('strictQuery', false);` if you want to prepare for this change. Or use `mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', true);
+
     //*Import functions/routes
 const connectDB = require("./config/database")
 const homeRoutes = require('./routes/home')

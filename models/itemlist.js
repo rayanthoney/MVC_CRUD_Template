@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 const itemListSchema = new mongoose.Schema({
-    textinput: {
+    textInput: {
         type: String,
         required: true
     },
-    numinput: {
+    numInput: {
         type: Number,
         required: true
     },
@@ -13,4 +13,5 @@ const itemListSchema = new mongoose.Schema({
         default: Date.now
     }
 })
+// exporting with mongoose model_name, model_schema, and collection_name
 module.exports = mongoose.model('ItemList',itemListSchema,'items')

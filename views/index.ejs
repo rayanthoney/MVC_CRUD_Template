@@ -7,7 +7,7 @@
     <title>100Devs MVC CRUD Template</title>
 </head>
 <body>
-    <h1>This is the Home Page!</h1>
+    <h1>Welcome to your Model View Controlller Template!</h1>
     <form action="/new" method="POST">
         <label for="textinput">Input Text</label>
         <input type="text" name = "textinput">
@@ -18,10 +18,11 @@
         <button type="submit">Add Item</button>
     </form>
     <ul>
+        <!-- EJS loop is our View Engine -->
         <% itemList.forEach(item => { %>
             <li>
-                <div><%= item.textinput %></div>
-                <div><%= item.numinput %></div>
+                <div><%= item.textInput %></div>
+                <div><%= item.numInput %></div>
                 <a href="">Edit</a>
                 <a href="">Remove</a>
             </li>
