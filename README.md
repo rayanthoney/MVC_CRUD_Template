@@ -8,7 +8,7 @@
 <!-- link to project -->
     <a href='-URL TO DEMO GOES HERE-'>
     <!-- link to local image -->
-        <img src="https://picsum.photos/600/300" alt="" height="100%"/>
+        <img src="public/img/mvc_crud_template.png" alt="" height="100%"/>
     </a>
 
 **Link to project:** http://recruiters-love-seeing-live-demos.com/
