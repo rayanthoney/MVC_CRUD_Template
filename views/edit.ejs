@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="#">
-    <title>100Devs MVC CRUD Template</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Edit Page</title>
 </head>
+
 <body>
     <section>
         <h1>Welcome to your Edit Page!</h1>
         <section>
             <ul>
-                <% itemList.forEach(item => { %>
-                    <% if (clicked item == item in list) { %>
-                     
-                    <% } %>
-                     
-                 <li>
-                    <form action="/edit/update/<%= item._id%>" method="POST">
-                        <label for="textInput">Input Text</label>
-                        <input type="text" name = "textInput" value="<%= item._textInput%>">
-                        <br>
-                        <label for="numInput" value="<%= item._numInput%>">Input Number</label>
-                        <input type="number" name = "numInput" value = 0>
-                        <br>
-                        <button type="submit">Confirm</button>
-                        <a href="/">Cancel</a>
-                    </form>
-                 </li>
-                <% }) %>
+                <% itemList.forEach(item=> { %>
+                    <% if (item._id==idItem) { %>
+                        <li>
+                            <form action="/edit/update/<%= item._id %>" method="POST">
+                                <label for="textinput">Input Text</label>
+                                <input type="text" value="<%= item.textinput %>" name="textinput">
+
+                                <label for="numinput">Input Number</label>
+                                <input type="number" value="<%= item.numinput %>" name="numinput">
+                                <button type="submit">Confirm</button>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <div>
+                                    <%= item.textinput %>
+                                </div>
+                                <div>
+                                    <%= item.numinput %>
+                                </div>
+                                <a href="/edit/<%= item._id %>">Edit</a>
+                                <a href="/edit/remove/<%= item._id %>" class="remove">Cancel</a>
+                            </li>
+                        <% } %>
+                    <% }) %>
             </ul>
         </section>
-
     </section>
-    
 </body>
+
 </html>
