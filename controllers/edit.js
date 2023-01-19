@@ -1,4 +1,3 @@
-const itemlist = require("../models/itemlist");
 const ItemList = require("../models/itemlist");
 
 module.exports = {
@@ -12,30 +11,30 @@ module.exports = {
       if (error) return res.status(500).send(error);
     }
   },
-  deleteItem: async (req, res) => {
-    const id = req.params.id;
+  deleteItem: async (req,res) => {
+    const id = req.params.id
     try {
-      const result = await itemlist.findByIdAndDelete(id);
-      console.log(result);
-      res.redirect("back");
+        const result = await ItemList.findByIdAndDelete(id)
+        console.log(result)
+        res.redirect('back')
     } catch (err) {
-      if (err) return res.status(500).send(err);
-    }
+        if (err) return res.status(500).send(err)
+    } 
   },
-  updateItem: async (req, res) => {
-    const id = req.params.id;
+  updateItem: async (req,res) => {
+    const id = req.params.id
     try {
-      await itemlist.findByIdAndUpdate(
-        id, 
-        {
-        textInput: req.body.textInput,
-        numInput: req.body.numInput,
-        }
-      );
-      res.redirect("/");
-    } catch (error) {
-      if (error) return res.status(500).send(error);
-      res.redirect("/");
-    }
-  },
+        await ItemList.findByIdAndUpdate(
+           id,
+           {
+            textinput: req.body.textinput,
+            numinput: req.body.numinput
+            },
+        )
+        res.redirect('/');
+    } catch (err) {
+        if (err) return res.status(500).send(err)
+        res.redirect('/');
+    } 
+  }
 };
