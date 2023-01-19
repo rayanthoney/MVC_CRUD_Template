@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100Devs MVC CRUD Template</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home Page</title>
 </head>
+
 <body>
-    <h1>Welcome to your Model View Controlller Template!</h1>
+    <h1>Welcome to your MVC Template!</h1>
     <form action="/new" method="POST">
         <label for="textinput">Input Text</label>
-        <input type="text" name = "textinput">
-        <br>
+        <input type="text" name="textinput">
+
         <label for="numinput">Input Number</label>
-        <input type="number" name = "numinput" value = 0>
-        <br>
+        <input type="number" name="numinput" value=0>
         <button type="submit">Add Item</button>
     </form>
     <ul>
         <!-- EJS loop is our View Engine -->
-        <% itemList.forEach(item => { %>
+        <% itemList.forEach(item=> { %>
             <li>
-                <div><%= item.textInput %></div>
-                <div><%= item.numInput %></div>
-                <a href="">Edit</a>
-                <a href="">Remove</a>
+                <div>
+                    <%= item.textinput %>
+                </div>
+                <div>
+                    <%= item.numinput %>
+                </div>
+                <a href="/edit/<%= item._id %>">Edit</a>
+                <a href="/edit/remove/<%= item._id %>">Remove</a>
             </li>
         <% }) %>
     </ul>
