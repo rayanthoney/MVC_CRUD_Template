@@ -13,8 +13,8 @@ module.exports = {
     createItem: async (req, res) => {
         const newItem = new ItemList(
             {
-                textinput: req.body.textInput,
-                numinput: req.body.numInput
+                textinput: req.body.textinput,
+                numinput: req.body.numinput
             });
         try {
             await newItem.save();
