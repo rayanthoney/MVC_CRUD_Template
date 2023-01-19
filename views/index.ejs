@@ -10,29 +10,55 @@
 </head>
 
 <body>
-    <h1>Welcome to your MVC Template!</h1>
-    <form action="/new" method="POST">
-        <label for="textinput">Input Text</label>
-        <input type="text" name="textinput">
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h2>100Devs MVC CRUD Template</h2>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="https://github.com/rayanthoney/100Devs-Bootcamp/tree/master/homework-layouts/100Devs_2023MVC_CRUD_template"
+                            target="_blank">Github Repo</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-        <label for="numinput">Input Number</label>
-        <input type="number" name="numinput" value=0>
-        <button type="submit">Add Item</button>
-    </form>
-    <ul>
-        <!-- EJS loop is our View Engine -->
-        <% itemList.forEach(item=> { %>
-            <li>
-                <div>
-                    <%= item.textinput %>
-                </div>
-                <div>
-                    <%= item.numinput %>
-                </div>
-                <a href="/edit/<%= item._id %>">Edit</a>
-                <a href="/edit/remove/<%= item._id %>">Remove</a>
-            </li>
-        <% }) %>
-    </ul>
+    <main>
+        <section class="showcase">
+            <!-- <h1>Welcome to your MVC Template!</h1> -->
+            <form action="/new" method="POST">
+                <label for="textinput">Input Text</label>
+                <input type="text" name="textinput">
+
+                <label for="numinput">Input Number</label>
+                <input type="number" name="numinput" value=0>
+                <button type="submit">Add Item</button>
+            </form>
+        </section>
+    </main>
+
+    <section class="results">
+        <div class="results-container">
+            <ul>
+                <!-- EJS loop is our View Engine -->
+                <% itemList.forEach(item=> { %>
+                    <li>
+                        <div>
+                            <%= item.textinput %>
+                        </div>
+                        <div>
+                            <%= item.numinput %>
+                        </div>
+                        <a href="/edit/<%= item._id %>">Edit</a>
+                        <a href="/edit/remove/<%= item._id %>">Remove</a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+    </section>
 </body>
+
 </html>
