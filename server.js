@@ -19,6 +19,7 @@ connectDB();
 
 //todo - Set Middleware
 app.set("view engine", "ejs");
+// Static Folder
 app.use(express.static("public"));
 
 //*Required to properly parse form POST requests - sending data
